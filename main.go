@@ -18,18 +18,12 @@ import (
 	"layeh.com/gumble/gumbleutil"
 )
 
-const (
-	// See http://golang.org/pkg/time/#Parse
-	timeFormat = "2006-01-02 15:04 MST"
-)
-
 var deadplayers []string
 var gamestate string
 var gameup bool
 var gamestatetime time.Time
 
 type Player struct {
-	//Action       PlayerAction `json:"Action"`
 	Name         string `json:"Name"`
 	Color        int    `json:"Color"`
 	IsDead       bool   `json:"IsDead"`
@@ -66,17 +60,17 @@ func socketioServer(client *gumble.Client) {
 		switch gamestate {
 		case "MENU":
 			log.Println("Gamemode: Menu")
-			//mumble.Endgame(client)
+			mumble.Endgame(client)
 			deadplayers = nil
 			gameup = false
 		case "LOBBY":
 			log.Println("Gamemode: LOBBY")
-			//mumble.Endgame(client)
+			mumble.Endgame(client)
 			deadplayers = nil
 			gameup = false
 		case "DISCUSSION":
 			log.Println("Gamemode: DISCUSSION")
-			//mumble.Meeting(client, deadplayers)
+			mumble.Meeting(client, deadplayers)
 		case "TASKS":
 			log.Println("Gamemode: TASKS")
 			gamestatetime = time.Now()
