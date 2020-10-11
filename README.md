@@ -4,6 +4,9 @@ A [Mumble](https://www.mumble.info/) bot for [Amoung US](http://www.innersloth.c
 
 Works in conjunction with [amonguscapture](https://github.com/denverquane/amonguscapture)
 
+## How it works
+Players join the lobby channel. When the game starts, players are moved to the alive channel and are muted/deafened. When a body is reported or the emergency button is pressed, players that are not dead are unmuted/undeafened. Players that are dead, stay muted, but are undeafened so they can hear what's going on. When the game resumes, alive players are once again muted/deafened while dead players are moved to the dead channel and can communicate freely.
+
 
 ## Requirements
 
@@ -24,6 +27,12 @@ Works in conjunction with [amonguscapture](https://github.com/denverquane/amongu
 5. Run amoungusmumble.
 6. Start Among Us.
 7. Start Capture. Type in code 123456 and click connect.
+
+## Usage
+
+Once the bot and capture are running, players need to join the lobby channel and join the lobby of the game. In mumble, players need to set a comment that is the same as their in game name. E.g. If my mumble user is Bob and my in game name is "Not the Imposter", then my mumble user should have the comment set, Not the Imposter.
+
+![](images/MumbleComment.jpg?raw=true)
 
 
 ## Build from source
