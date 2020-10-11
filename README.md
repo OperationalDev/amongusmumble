@@ -11,16 +11,16 @@ Works in conjunction with [amonguscapture](https://github.com/denverquane/amongu
 2. Four mumble channels, AmongUs, Alive, Dead and Lobby. They need to be structured as follows:
 ![](images/MumbleChannels.jpg?raw=true)
 3. A mumble registered user account for the bot. This account needs to have permission to mute/unmute users and move users between the Lobby/Dead/Alive channels.
-4. The certificate for the mumble user your bot will use. You will need to convert this certificate to be in PEM format. See [Certificate Help](#Certificate Help)
+4. The certificate for the mumble user your bot will use. You will need to convert this certificate to be in PEM format. See [Certificate-Help](#Certificate Help)
 
 
 ## Install
 
 1. Create folder for you bot.
-2. Copy your cert and key for bot to your bot folder. See below for help on generating certicate help.
+2. Copy your cert and key for bot to your bot folder. See [below](#Certificate Help) for help on generating certicate help.
 3. Download latest bot executable from [here](https://github.com/OperationalDev/amongusmumble/releases) and place it in the bot folder
 4. Download v2.0.7 AmongUs capture executable from [here](https://github.com/denverquane/amonguscapture/releases) and place it in the bot folder.
-5. Copy config.example to config and edit it. See [Config Example](#Config Example)
+5. Copy config.example to config and edit it. See [Config Example](#Config-Example)
 5. Run amoungusmumble.
 6. Start Among Us.
 7. Start Capture. Type in code 123456 and click connect.
@@ -28,7 +28,7 @@ Works in conjunction with [amonguscapture](https://github.com/denverquane/amongu
 
 ## Build from source
 
-1. Clonde repo
+1. Clone repo
 2. cd repo
 3. go build .
 
@@ -53,7 +53,7 @@ username: "botname" # Your bot's username
 ```
 
 ## Similar Projects
-- [AmongUsDiscord](htps://github.com/denverquane/amongusdiscord)without their original project and capture tool, this would not be possible.
+- [AmongUsDiscord](htps://github.com/denverquane/amongusdiscord) without their original project and capture tool, this would not be possible.
 
 
 ## License
