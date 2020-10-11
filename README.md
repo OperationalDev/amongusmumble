@@ -1,8 +1,8 @@
 # amongusmumble
 
-A [Mumble](https://www.mumble.info/) bot for (Amoung US)[http://www.innersloth.com/gameAmongUs.php] to manage muting/unmuting of players during the game.
+A [Mumble](https://www.mumble.info/) bot for [Amoung US](http://www.innersloth.com/gameAmongUs.php) to manage muting/unmuting of players during the game.
 
-Works in conjunction with (amonguscapture)[https://github.com/denverquane/amonguscapture]
+Works in conjunction with [amonguscapture](https://github.com/denverquane/amonguscapture)
 
 
 ## Requirements
@@ -18,8 +18,8 @@ Works in conjunction with (amonguscapture)[https://github.com/denverquane/amongu
 
 1. Create folder for you bot.
 2. Copy your cert and key for bot to your bot folder. See below for help on generating certicate help.
-3. Download latest bot executable from (here)[https://github.com/OperationalDev/amongusmumble/releases] and place it in the bot folder
-4. Download v2.0.7 AmongUs capture executable from (here)[https://github.com/denverquane/amonguscapture/releases] and place it in the bot folder.
+3. Download latest bot executable from [here](https://github.com/OperationalDev/amongusmumble/releases) and place it in the bot folder
+4. Download v2.0.7 AmongUs capture executable from [here](https://github.com/denverquane/amonguscapture/releases) and place it in the bot folder.
 5. Copy config.example to config and edit it. See [Config Example](#Config Example)
 5. Run amoungusmumble.
 6. Start Among Us.
@@ -53,7 +53,7 @@ username: "botname" # Your bot's username
 ```
 
 ## Similar Projects
-- (AmongUsDiscord)[https://github.com/denverquane/amongusdiscord] without their original project and capture tool, this would not be possible.
+- [AmongUsDiscord](htps://github.com/denverquane/amongusdiscord)without their original project and capture tool, this would not be possible.
 
 
 ## License
