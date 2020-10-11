@@ -1,4 +1,4 @@
-# amongusmumble
+# AmongUs Mumble
 
 A [Mumble](https://www.mumble.info/) bot for [Amoung US](http://www.innersloth.com/gameAmongUs.php) to manage muting/unmuting of players during the game.
 
