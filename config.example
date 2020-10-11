@@ -1,0 +1,6 @@
+cert: "certname.crt"
+key: "cername.key"
+listenaddress: "0.0.0.0"
+listenport: "8123"
+mumbleserver: "mymumbleserver.com:64738"
+username: "botname"
