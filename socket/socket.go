@@ -93,11 +93,19 @@ func SocketioServer(client *gumble.Client, listenaddress string, listenport stri
 				duration := time.Since(gamestatetime)
 				if duration.Seconds() < 10 {
 					log.Println("Move", player.Name, "to Dead now")
+					alive := client.Channels.Find("AmongUs", "Alive")
 					dead := client.Channels.Find("AmongUs", "Dead")
-					user := client.Users.Find(player.Name)
-					user.Move(dead)
-					user.SetMuted(false)
-					user.SetDeafened(false)
+					log.Println("In game player:", player)
+					aliveusers := client.Channels[alive.ID].Users
+
+					for _, element := range aliveusers {
+						if element.Comment == player.Name {
+							element.Move(dead)
+							element.SetMuted(false)
+							element.SetDeafened(false)
+							log.Println(player.Name, "Moved to Dead")
+						}
+					}
 				} else {
 					log.Println("Move", player.Name, "to Dead at end of round")
 				}

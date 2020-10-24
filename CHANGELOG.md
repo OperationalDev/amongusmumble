@@ -1,5 +1,11 @@
 # Change Log
 
+## v0.2.2
+### Bugs
+- Fixed moving player to dead when voted out for real this time.
+- New Nil pointer dereference bug fixed.
+
+
 ## v0.2.1
 ### Bugs
 - Players always get moved to the dead channel when voted out.
