@@ -28,14 +28,20 @@ func Kill(c *gumble.Client, player string, gamestate string, deadplayers []strin
 			duplicateplayer = duplicateplayer + 1
 		}
 	}
-	if duplicateplayer == 0 {
-		deadplayers = append(deadplayers, strings.TrimSpace(player2))
-		log.Println(player2, "is now dead")
+
+	if player2 != "" {
+		if duplicateplayer == 0 {
+			log.Println(player2, "is now dead")
+			deadplayers = append(deadplayers, strings.TrimSpace(player2))
+		} else {
+			log.Println(player2, "is already dead")
+		}
 	} else {
-		log.Println(player2, "is already dead")
+		log.Println("Ignoring blank player name")
 	}
 
 	log.Println("Dead Players:", deadplayers)
+
 	return deadplayers
 }
 

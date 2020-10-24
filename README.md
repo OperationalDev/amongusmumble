@@ -44,10 +44,10 @@ Once the bot and capture are running, players need to join the lobby channel and
 
 ## Certificate Help
 
-Export your bot's certificate from mumble. This should be in a p12/pkcs format. Now convert this to a pem format with the following commands:
+Export your bot's certificate from mumble (See this [video](https://www.typefrag.com/mumble/tutorials/backup-or-import-certificate/) for help). This should be in a p12/pkcs format. Now convert this to a pem format with the following commands:
 ```
-openssl pkcs12 -in botuser.p12 -nocerts -out botuser.key
-openssl pkcs12 -in botuser.p12 -nocerts -nokeys -out botuser.crt
+openssl pkcs12 -info -in botuser.p12 -nodes -out 6ix9ine.key -nocerts
+openssl pkcs12 -info -in botuser.p12 -nodes -out botuser.crt -nokeys
 ```
 
 ## Config Example
