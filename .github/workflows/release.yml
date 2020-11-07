@@ -54,6 +54,7 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./amongusmumble-x64-${{ github.ref }}
           asset_name: amongusmumble-x64-${{ github.ref }}
+          asset_content_type: application/octet-stream
 
       - name: Build Windows
         run: GOOS=windows go build -o amongusmumble-x64-${{ github.ref }}.exe
@@ -66,3 +67,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
           asset_path: ./amongusmumble-x64-${{ github.ref }}.exe
           asset_name: amongusmumble-x64-${{ github.ref }}.exe
+          asset_content_type: application/octet-stream
