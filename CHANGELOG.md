@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
+## [0.2.10] - 2020-11-07
+### Added
+- Added github actions to build artifacts.
+
 ## [0.2.9] - 2020-11-07
 ### Added
 - Added github actions to build artifacts.
