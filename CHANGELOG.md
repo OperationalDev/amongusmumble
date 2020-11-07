@@ -1,5 +1,9 @@
 # Change Log
 
+## v0.2.8
+### Changes
+- Added github actions to build artifacts.
+
 ## v0.2.2
 ### Bugs
 - Fixed moving player to dead when voted out for real this time.
