@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Added
+- game names are now checked case insensitive
+- if no comment set, use mumble name
+
 ### Changed
 ### Deprecated
 ### Removed
@@ -14,17 +17,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Security
 
 
-## [0.2.12] - 2020-11-07
+## [0.3.0]
 ### Added
-- smoke
+- Notifications im mumble if in game player name and mumble user name don't match.
 
-## [0.2.10] - 2020-11-07
-### Added
-- Added github actions to build artifacts.
-
-## [0.2.9] - 2020-11-07
-### Added
-- Added github actions to build artifacts.
+### Fixed
+- Player leaving mumble no longer causes the bot to go into a panic.
+- A player leaving or disconnecting from the game no longer causes the bot to do an update.
 
 ## [0.2.2]
 ### Fixed

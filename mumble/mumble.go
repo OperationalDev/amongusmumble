@@ -72,11 +72,13 @@ func Meeting(c *gumble.Client, deadplayers []string) {
 
 	for _, deadplayer := range deadplayers {
 		user := c.Users.Find(deadplayer)
-		log.Println("Mute player", user.Name)
-		user.SetMuted(true)
-		user.SetDeafened(false)
-		user.Move(alive)
-		log.Println(user.Name, "is dead")
+		if user != nil {
+			log.Println("Mute player", user.Name)
+			user.SetMuted(true)
+			user.SetDeafened(false)
+			user.Move(alive)
+			log.Println(user.Name, "is dead")
+		}
 	}
 }
 
@@ -98,11 +100,13 @@ func Resumegame(c *gumble.Client, deadplayers []string) {
 
 	for _, deadplayer := range deadplayers {
 		user := c.Users.Find(deadplayer)
-		log.Println("Unmute player", user.Name)
-		user.SetMuted(false)
-		user.SetDeafened(false)
-		user.Move(dead)
-		log.Println(user.Name, "is dead")
+		if user != nil {
+			log.Println("Unmute player", user.Name)
+			user.SetMuted(false)
+			user.SetDeafened(false)
+			user.Move(dead)
+			log.Println(user.Name, "is dead")
+		}
 	}
 }
 
@@ -145,6 +149,7 @@ func Namecheck(c *gumble.Client, player string) {
 			return
 		}
 	}
+	lobby.Send("Player "+player+" does not have a mumble user set.", true)
 	log.Println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 	log.Println("Player", player, "does not have a mumble user set.")
 	log.Println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
