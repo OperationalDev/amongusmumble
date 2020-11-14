@@ -1,25 +1,40 @@
-# Change Log
+# Changelog
+All notable changes to this project will be documented in this file.
 
-## v0.2.2
-### Bugs
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+
+## [Unreleased]
+### Added
+- game names are now checked case insensitive
+- if no comment set, use mumble name
+
+### Changed
+### Deprecated
+### Removed
+### Fixed
+### Security
+
+
+## [0.2.2]
+### Fixed
 - Fixed moving player to dead when voted out for real this time.
 - New Nil pointer dereference bug fixed.
 
-
-## v0.2.1
-### Bugs
+## [0.2.1]
+### Fixed
 - Players always get moved to the dead channel when voted out.
 - Nil pointer dereference bug fixed.
 - Fixed certificate commands in README.
 
-
-## v0.2.0
-### Changes
-- Updated README to include setup instructions.
-
-### New Features
+## [0.2.0]
+### Added
 - Allow passing botname, cert, key, server as parameters from config file.
 
+### Changed
+- Updated README to include setup instructions.
 
-## v0.1.0
+## [0.1.0]
+### Added
 - Initial Release
