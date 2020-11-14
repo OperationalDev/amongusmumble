@@ -14,6 +14,7 @@ import (
 
 type player struct {
 	Name         string `json:"Name"`
+	Action       int    `json:"Action"`
 	Color        int    `json:"Color"`
 	IsDead       bool   `json:"IsDead"`
 	Disconnected bool   `json:"Disconnected"`
@@ -84,6 +85,11 @@ func SocketioServer(client *gumble.Client, listenaddress string, listenport stri
 		log.Println("Gamestate: ", gamestate)
 		player := player{}
 		_ = json.Unmarshal([]byte(msg), &player)
+
+		if player.Action == 1 || player.Action == 5 {
+			log.Println(player, "left the game.")
+			return
+		}
 
 		if gamestate == "LOBBY" {
 			mumble.Namecheck(client, strings.TrimSpace(player.Name))
